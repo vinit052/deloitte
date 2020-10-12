@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @category  Deloitte
+ * @package   Deloitte_DeveloperTest
+ * @author    Deloitte Team <info@deloitte.com>
+ * @copyright 2020 Deloitte 
+ * @link      https://www2.deloitte.com/
+ */	
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+	<module name="Deloitte_DeveloperTest" setup_version="1.0.0" />
+</config>

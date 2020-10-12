@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category  Deloitte
+ * @package   Deloitte_DeveloperTest
+ * @author    Deloitte Team <info@deloitte.com>
+ * @copyright 2020 Deloitte 
+ * @link      https://www2.deloitte.com/
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template" name="validate" template="Deloitte_DeveloperTest::validate.phtml" />
+        </referenceContainer>
+    </body>
+</page>
