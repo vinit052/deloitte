@@ -1,16 +1,39 @@
-define(['uiComponent'], function(Component) {
- 
+define([
+    'jquery',
+    'uiComponent',
+    'ko',
+    'underscore'
+], function (
+    $,
+    Component,
+    ko,
+    _
+) {
+    'use strict';
+
     return Component.extend({
-        initialize: function () {
+        availableOptions: ko.observableArray([]),
+        /**
+         * Init component
+         */
+        initialize: function (config) {
             this._super();
-            this.time = Date();
-            //time is defined as observable
-            this.observe(['time']);
-            //periodically updater every second
-            setInterval(this.flush.bind(this), 1000);
+            var self = this;
+            self.optionsList;
+            //return this;
         },
-        flush: function(){
-            this.time(Date());
+        optionsList:function(){
+            var option = {
+                'value': 'Aadhar',
+                'label': 0
+            };
+            self.availableOptions.push(option);
+        },
+        verify:function(){
+            console.log('take actionyyy');
+            var cardNumber = $('#card-field').val();
+            console.log(cardNumber);
+
         }
     });
 });

@@ -14,23 +14,14 @@
  */
 ?>
 <div id="popup-modal" style="display:none;">
-    <h1> Verify your age before adding product in car. </h1>
-    <select id="id-cards" name="cards">
-        <option value="1">Pan card</option>
-        <option value="2">Aadhar card</option>
-        <option value="3">Passport number</option>
-        <input id="card-field" name="cart-field">
-        <button id="verify-btn" >varify</button>
-    </select>
+    <div data-bind="scope: 'ageverification'">
+        <!-- ko template: getTemplate() -->
+        <!-- /ko -->
+    </div>
 </div>
 
-
-<div data-bind="scope: 'ageverification'">
-<!-- ko template: getTemplate() --><!-- /ko -->
-</div>
- 
 <script type="text/x-magento-init">
-        {
+    {
             "*": {
                 "Magento_Ui/js/core/app": {
                     "components": {
@@ -71,23 +62,9 @@
             };
 
             $('button.action.tocart.primary').click(function(e) {
-                showPopup(e);
-                console.log('test');
-                event.preventDefault();
-            });
-           
-            function showPopup(e) {
                 $("#popup-modal").modal("openModal");
                 event.preventDefault();
-            }
-
-            $("#verify-btn").on('click', function() {
-                //$( "button.action.tocart.primary" ).trigger( "click" );
             });
-
-            function verify() {
-                
-            }
 
         }
     );
